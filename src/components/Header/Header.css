@@ -1,0 +1,95 @@
+.container{
+  min-width: 100%;
+  background-color: black;
+}
+
+.tormenta{
+  background-image: url('../../assets/image/jpg/rayo.jpg');
+  height: 700px;
+  background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+  transition: all 2s ease;
+  transform:scale(1);
+        -ms-transform:scale(1); 
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1); 
+        -o-transform:scale(1);      
+  z-index: 10;
+}
+
+.lluvia{
+  background-image: url('../../assets/image/jpg/lluvia.jpg');
+  height: 700px;
+  background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+  transition: all 2s ease;
+  background-color: rgba(0, 0, 0, 0);
+  transform:scale(1);
+            -ms-transform:scale(1); 
+            -moz-transform:scale(1);
+            -webkit-transform:scale(1); 
+            -o-transform:scale(1);  
+  z-index: 10;          
+}
+
+.playa{
+  background-image: url('../../assets/image/jpg/playa2.jpg');
+  height: 700px;
+  background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+  transition: all 2s ease;
+  transform:scale(1);
+            -ms-transform:scale(1); 
+            -moz-transform:scale(1);
+            -webkit-transform:scale(1); 
+            -o-transform:scale(1);  
+  z-index: 10;
+}
+
+.nieve{
+  background-image: url('../../assets/image/jpg/nieve.jpg');
+  height: 700px;
+  background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+  transition: all 2s ease;
+  transform:scale(1);
+            -ms-transform:scale(1); 
+            -moz-transform:scale(1);
+            -webkit-transform:scale(1); 
+            -o-transform:scale(1);  
+  z-index: 10;
+}
+
+.spanTitle{
+  font-family: 'Open Sans';
+  position:absolute;
+  z-index: 20;
+  display:block;
+  bottom:50%;
+  width:100%;
+  text-align:center;
+  color: white;
+  font-size: 48px;
+}
+
+.clima:hover{
+	position: absolute;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  opacity: .5;
+  transform:scale(0.8);
+            -ms-transform:scale(0.8); 
+            -moz-transform:scale(0.8);
+            -webkit-transform:scale(0.8); 
+            -o-transform:scale(0.8);  
+}
