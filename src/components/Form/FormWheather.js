@@ -3,6 +3,8 @@ import {useState} from 'react';
 import {Button, Form} from 'react-bootstrap';
 import Error from '../Error/Error';
 
+import './FormWeather.css';
+
 const FormWheather = ({setValuesForm, setConsultar}) => {
 
   //States
@@ -33,7 +35,7 @@ const FormWheather = ({setValuesForm, setConsultar}) => {
   }
 
   return ( 
-    <Form className='mt-4' onSubmit={sendValues}>
+    <Form className='m-4 formWeather' onSubmit={sendValues}>
       {error ? <Error title='Apa! parece que metiste mal el dedo' description='Uno o mas campos están vacios' /> : null}
       <Form.Group className='bg-primary p-4 rounded'>
         <Form.Label className='h3'>Selecciona un pais</Form.Label>
@@ -59,11 +61,12 @@ const FormWheather = ({setValuesForm, setConsultar}) => {
           className='h3 mt-2'
           >Ciudad</Form.Label>
         <Form.Control 
-          size='lg' 
+          size='md' 
           as='input'
           placeholder='Tu ciudad'
           value={ciudad}
           onChange={e => setCiudad(e.target.value)}
+          className='inputCity'
         ></Form.Control>
         <Button type='submit' className='btn btn-dark rounded mt-4' block>Solicitar</Button>
       </Form.Group>

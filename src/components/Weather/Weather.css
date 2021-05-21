@@ -1,0 +1,22 @@
+
+
+.titleCard{
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  font-size: 40px;
+}
+
+.cardTextTemp{
+  text-align: center;
+  padding: 20px;
+  font-size: 35px;
+}
+
+.cardTextMaxMin{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+}

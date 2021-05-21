@@ -10,13 +10,6 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-  transition: all 2s ease;
-  transform:scale(1);
-        -ms-transform:scale(1); 
-        -moz-transform:scale(1);
-        -webkit-transform:scale(1); 
-        -o-transform:scale(1);      
-  z-index: 10;
 }
 
 .lluvia{
@@ -25,15 +18,7 @@
   background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	position: relative;
-  transition: all 2s ease;
-  background-color: rgba(0, 0, 0, 0);
-  transform:scale(1);
-            -ms-transform:scale(1); 
-            -moz-transform:scale(1);
-            -webkit-transform:scale(1); 
-            -o-transform:scale(1);  
-  z-index: 10;          
+	position: relative;          
 }
 
 .playa{
@@ -43,13 +28,6 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-  transition: all 2s ease;
-  transform:scale(1);
-            -ms-transform:scale(1); 
-            -moz-transform:scale(1);
-            -webkit-transform:scale(1); 
-            -o-transform:scale(1);  
-  z-index: 10;
 }
 
 .nieve{
@@ -59,13 +37,6 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-  transition: all 2s ease;
-  transform:scale(1);
-            -ms-transform:scale(1); 
-            -moz-transform:scale(1);
-            -webkit-transform:scale(1); 
-            -o-transform:scale(1);  
-  z-index: 10;
 }
 
 .spanTitle{
@@ -80,6 +51,16 @@
   font-size: 48px;
 }
 
+.clima{
+  transition: all 2s ease;
+  transform:scale(1);
+            -ms-transform:scale(1); 
+            -moz-transform:scale(1);
+            -webkit-transform:scale(1); 
+            -o-transform:scale(1);  
+  z-index: 10;
+}
+
 .clima:hover{
 	position: absolute;
   top: 0;
@@ -92,4 +73,24 @@
             -moz-transform:scale(0.8);
             -webkit-transform:scale(0.8); 
             -o-transform:scale(0.8);  
+}
+
+
+@media (min-width: 600px) and (max-width: 768px){
+  .clima{
+    height: 500px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 599px){
+  .clima{
+    height: 300px;
+
+  }
+
+  .clima:hover{
+    position: relative;
+    transform: none !important;
+  }
 }

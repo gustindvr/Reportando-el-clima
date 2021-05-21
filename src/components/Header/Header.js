@@ -2,7 +2,7 @@ import {Container,Row, Col } from 'react-bootstrap';
 
 import './Header.css';
 
-const Header = ({title}) => {
+const Header = () => {
   return ( 
     <Container>
       <Row >
@@ -23,7 +23,6 @@ const Header = ({title}) => {
           <div className='spanTitle'>Mundo</div>
         </Col>
       </Row>
-          <>{title}</>
     </Container>
    );
 }

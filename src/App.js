@@ -42,20 +42,20 @@ function App() {
 
   return (
     <>
-      <Header title='El clima en el mundo' />
-      <Container>
+      <Header />
+      <Container  className='pt-5'>
         <Row>
-          <Col sm={12} md={12} lg={4}>
+          <Col sm={12} md={4} lg={4}>
             <FormWheather
               setValuesForm={setValuesForm}
               setConsultar={setConsultar}
             />
           </Col>
-          <Col sm={12} md={12} lg={8}>
+          <Col sm={12} md={8} lg={8}>
             {
               (error) ?
                 null
-              : <Weather resultado={resultado} />
+              : <Weather resultado={resultado} setConsultar={setConsultar} />
             }
           </Col>
         </Row>
