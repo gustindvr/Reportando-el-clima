@@ -1,9 +1,11 @@
 import {useState, useEffect} from 'react';
 import FormWheather from './components/Form/FormWheather';
 
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Alert} from 'react-bootstrap';
 import Header from './components/Header/Header';
 import Weather from './components/Weather/Weather';
+import Error from './components/Error/Error';
+
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
   const [error, setError] = useState(false);
   const [valuesForm, setValuesForm] = useState({});
   const [consultar, setConsultar] = useState(false);
+  const [world, setWorld] = useState(true);
   const [resultado, setResultado] = useState({});
 
   //Destructuring
@@ -27,10 +30,11 @@ function App() {
         const respuesta = await fetch(url);
         const resultado = await respuesta.json(); 
         
-        setConsultar(false);
         setResultado(resultado);
+        setConsultar(false);
+        setWorld(false);
 
-        if(resultado.error === '404'){
+        if(resultado.cod === '404'){
           setError(true);
         }else{
           setError(false);
@@ -52,9 +56,19 @@ function App() {
             />
           </Col>
           <Col sm={12} md={8} lg={8}>
+            {error ? <Error title='Epa! Parece que hubo un error' description='No se encontraron los parametros buscados' /> : null}
             {
-              (error) ?
-                null
+              (world) ?
+              <Alert variant="warning" className='mt-4'>
+                <Alert.Heading>Hola! Bienvenidx</Alert.Heading>
+                <p>
+                  Este es un proyecto de prueba donde podrás consultar el clima de algunas ciudades o provincias que se encuentran en paises de América Latina.
+                </p>
+                <hr />
+                <p className="mb-0">
+                  Muchas gracias por pasar! Espero poder ir entregandote mejores experiencias en el futuro. Nos vemos!
+                </p>
+              </Alert>
               : <Weather resultado={resultado} setConsultar={setConsultar} />
             }
           </Col>
